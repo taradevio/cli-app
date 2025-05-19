@@ -37,7 +37,7 @@ const addTodo = async () => {
       await db.update(({ todoLists }) => todoLists.push(storeTodo));
       const styleTodo = styleText(["yellow", "bold"], storeTodo.title);
       const styleID = styleText(["blue", "bold"], storeTodo.id.toString());
-      console.log(`task ${styleTodo} is added successfully! (ID: ${styleID})`);
+      console.log(`task ${styleTodo} has been added successfully! (ID: ${styleID})`);
       rl.close();
     } else {
       console.log(
